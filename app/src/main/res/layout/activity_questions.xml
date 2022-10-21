@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".Activities.QuestionsActivity">
+
+    <LinearLayout
+        android:id="@+id/timer"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/textView_second"
+            android:text="00"
+            style="@style/textView_timer" />
+        <TextView
+            android:text=":"
+            style="@style/textView_colon_timer" />
+
+        <TextView
+            android:id="@+id/textView_minute"
+            android:text="00"
+            style="@style/textView_timer"
+            />
+
+        <TextView
+            android:text=":"
+            style="@style/textView_colon_timer"
+            />
+        <TextView
+            android:id="@+id/textView_hour"
+            android:text="00"
+            style="@style/textView_timer"
+            />
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/timer"
+        />
+
+    <Button
+        android:id="@+id/button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:text="پایان"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>
