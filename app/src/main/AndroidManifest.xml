@@ -15,14 +15,17 @@
         android:theme="@style/Theme.AyinName"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activities.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.FlashCardsActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.ListExamsActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Activities.QuestionsActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
