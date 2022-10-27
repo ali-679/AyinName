@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.RegisterActivity">
+    tools:context=".Activities.LoginActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="ثبت نام"
+                android:text="ورود"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -90,40 +90,23 @@
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView_forgetPass"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp">
-
-                <EditText
-                    android:id="@+id/editText_repassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="editText_email"
-                    android:background="@null"
-                    android:drawableRight="@drawable/ic_lock"
-                    android:drawablePadding="8dp"
-                    android:hint="تکرار رمز عبور"
-                    android:inputType="textPassword"
-                    android:maxLength="100"
-                    android:maxLines="1"
-                    android:padding="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingTop="12sp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="12dp"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:text="فراموشی رمز عبور"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/buttonColor"
+                android:textStyle="bold"
+                />
 
             <Button
+                android:id="@+id/button_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/buttonColor"
-                android:text="ثبت نام"
+                android:text="ورود"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginTop="16dp"
@@ -131,14 +114,17 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="آیا حساب کاربری دارید؟ بله"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="16dp"
-            android:textColor="@color/buttonColor"
-            android:textStyle="bold"
-            />
+    <TextView
+        android:id="@+id/textView_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="آیا فاقد حساب کاربری می باشید؟ بله"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:textColor="@color/buttonColor"
+        android:textStyle="bold"
+        />
+
+
 </RelativeLayout>

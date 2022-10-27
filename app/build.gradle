@@ -50,4 +50,7 @@ dependencies {
     // swipe refresh layout
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
+    //pin view
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+
 }
