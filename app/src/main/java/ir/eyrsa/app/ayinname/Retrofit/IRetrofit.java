@@ -18,4 +18,17 @@ public interface IRetrofit {
     @POST("GetExams.php")
     Call<List<Exams_Model>> getExams(@Query("U_idUser") String U_idUser);
 
+
+    // Login
+    @POST("CheckUserExists.php")
+    Call<ResponseBody> CheckUserExists(@Query("email") String email);
+
+    @POST("RegisterUser.php")
+    Call<ResponseBody> RegisterUser(@Query("U_email") String U_email,
+                                    @Query("U_password") String U_password);
+
+    @POST("Login.php")
+    Call<ResponseBody> Login(@Query("email") String email,
+                                    @Query("password") String password);
+
 }

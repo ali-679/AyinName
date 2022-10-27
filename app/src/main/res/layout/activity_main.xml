@@ -173,12 +173,12 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_buy"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="-10dp"
+        android:layout_marginBottom="-20dp"
         app:cardBackgroundColor="@color/buttonColor"
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp">
@@ -211,7 +211,7 @@
 
             <com.airbnb.lottie.LottieAnimationView
                 android:layout_width="100dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 app:lottie_autoPlay="true"
