@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AyinName"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activities.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.LoginActivity"
             android:exported="false" />
         <activity
