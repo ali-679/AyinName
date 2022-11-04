@@ -7,7 +7,7 @@ public class SharedPreferencesManager {
 
     static SharedPreferences sharedPreferences;
 
-    public static final String IDUSER="iduser";
+    public static final String EMAIL="EMAIL";
 
 
     public static SharedPreferences getSharedPreferences()

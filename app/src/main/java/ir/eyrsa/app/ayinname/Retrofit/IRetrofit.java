@@ -29,6 +29,14 @@ public interface IRetrofit {
 
     @POST("Login.php")
     Call<ResponseBody> Login(@Query("email") String email,
-                                    @Query("password") String password);
+                             @Query("password") String password);
+
+    @POST("ForgetPassword.php")
+    Call<ResponseBody> ForgetPassword(@Query("email") String email,
+                                      @Query("code") String code);
+
+    @POST("ChangePassword.php")
+    Call<ResponseBody> ChangePassword(@Query("email") String email,
+                                      @Query("password") String password);
 
 }

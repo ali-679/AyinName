@@ -19,6 +19,7 @@ public class Config {
     public static final String TAG = "Eyrsa";
     public static final String BASE_URL = "http://alifeyzabadi.ir/AyinName/";
     public static final String EXAM_URL = "Exam/";
+    public static final String LOGIN_URL = "Login/";
 
     public static void successToast(String message)
     {
