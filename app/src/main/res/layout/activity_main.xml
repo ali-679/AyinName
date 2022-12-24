@@ -170,13 +170,24 @@
         </RelativeLayout>
     </ScrollView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_support"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/support"
+        android:tint="@color/colorWhite"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_above="@id/cardView_buy"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_buy"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="-20dp"
         app:cardBackgroundColor="@color/buttonColor"
