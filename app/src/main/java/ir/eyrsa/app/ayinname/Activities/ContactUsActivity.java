@@ -33,11 +33,11 @@ public class ContactUsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentGmail=new Intent(Intent.ACTION_SEND);
-                intentGmail.putExtra(Intent.EXTRA_EMAIL,"fzali.679@gmail.com");
+                intentGmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"fzali.679@gmail.com"});
                 intentGmail.setType("message/rfc822");
 
                 // startActivity with intent with chooser as Email client using createChooser function
-                startActivity(Intent.createChooser(intentGmail, "انتخاب کنید"));
+                startActivity(Intent.createChooser(intentGmail, "جیمیل را انتخاب کنید"));
             }
         });
 

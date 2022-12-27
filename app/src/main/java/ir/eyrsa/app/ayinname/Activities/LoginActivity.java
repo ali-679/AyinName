@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -67,6 +68,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (view==textView_register)
         {
             startActivity(new Intent(Application.getContext(),RegisterActivity.class));
+            finish();
         }
         else if(view==textView_forgetPass)
         {
@@ -90,7 +92,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     {
                         SharedPreferencesManager.getSharedPreferences().edit().putString(SharedPreferencesManager.EMAIL,email).apply();
                         startActivity(new Intent(Application.getContext(),MainActivity.class));
+                        finish();
                     }
+                    else
+                        Config.failedToast(getString(R.string.toast_errorPassOrEmail));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -99,6 +104,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Config.failedToast(getString(R.string.toast_errorGetData));
+                login(email,pass);
             }
         });
     }

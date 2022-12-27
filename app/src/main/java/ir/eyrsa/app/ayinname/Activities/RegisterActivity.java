@@ -83,7 +83,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 checkUserExists(email,password);
             }
         } else if (view == textView_login) {
-
+            startActivity(new Intent(Application.getContext(),LoginActivity.class));
+            finish();
         }
     }
 
@@ -124,6 +125,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     {
                         SharedPreferencesManager.getSharedPreferences().edit().putString(SharedPreferencesManager.EMAIL,email).apply();
                         startActivity(new Intent(Application.getContext(),MainActivity.class));
+                        finish();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();

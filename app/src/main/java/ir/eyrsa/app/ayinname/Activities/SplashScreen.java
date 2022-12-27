@@ -20,9 +20,9 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                boolean login = SharedPreferencesManager.getSharedPreferences().getBoolean(SharedPreferencesManager.EMAIL,false);
+                String email = SharedPreferencesManager.getSharedPreferences().getString(SharedPreferencesManager.EMAIL,"");
                 //This method will be executed once the timer is over
-                if (login)
+                if (!email.equals(""))
                 startActivity(new Intent(Application.getContext(), MainActivity.class));
                 else
                     startActivity(new Intent(Application.getContext(), LoginActivity.class));

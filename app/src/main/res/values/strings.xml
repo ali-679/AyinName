@@ -3,6 +3,7 @@
 
 
     <string name="toast_errorGetData">نمی تواند اطلاعات را دریافت کند</string>
+    <string name="toast_errorPassOrEmail">نام کاربری یا رمز عبور صحیح نمی باشد</string>
     <string name="toast_errorEmail">ایمیل صحیح نمی باشد</string>
     <string name="toast_errorLengthPass">رمز عبور حداقل باید 8 کاراکتر باشد</string>
     <string name="toast_errorRePass">رمز عبور و تکرار رمز عبور یکسان نمی باشند</string>
