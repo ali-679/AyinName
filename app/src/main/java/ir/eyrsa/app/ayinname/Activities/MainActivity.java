@@ -42,10 +42,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         img3.startAnimation(animationOpacity);
         img4.startAnimation(animationMoveFour);
 
-        click();
-
         floating_support=findViewById(R.id.floating_support);
 
+        cardView_exam=findViewById(R.id.cardView_exam);
+        cardView_roadSign=findViewById(R.id.cardView_roadSign);
+        cardView_train=findViewById(R.id.cardView_train);
+        cardView_buy=findViewById(R.id.cardView_buy);
+
+        click();
 
     }
 
