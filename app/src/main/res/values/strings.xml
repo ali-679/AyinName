@@ -9,6 +9,7 @@
     <string name="toast_errorRePass">رمز عبور و تکرار رمز عبور یکسان نمی باشند</string>
     <string name="toast_errorEmailExists">این کاربر وجود دارد</string>
     <string name="toast_errorEnter">نمی توان وارد شد</string>
+    <string name="toast_errorBuy">باید پکیج کامل را خریداری نمایید</string>
 
 
 

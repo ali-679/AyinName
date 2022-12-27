@@ -6,16 +6,30 @@
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp"
     android:layout_margin="8dp"
+    android:id="@+id/cardView"
     >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
         <TextView
+            android:id="@+id/textView_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
             android:layout_centerInParent="true"
-            android:id="@+id/textView_nameExam"
+            android:textSize="40sp"
+            />
+        <ImageView
+            android:id="@+id/imageView_lock"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_lock"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/textView_number"
             />
     </RelativeLayout>
 

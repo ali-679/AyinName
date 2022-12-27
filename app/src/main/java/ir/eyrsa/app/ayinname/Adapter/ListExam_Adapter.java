@@ -1,16 +1,23 @@
 package ir.eyrsa.app.ayinname.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import ir.eyrsa.app.ayinname.Activities.QuestionsActivity;
+import ir.eyrsa.app.ayinname.Config.Application;
+import ir.eyrsa.app.ayinname.Config.Config;
 import ir.eyrsa.app.ayinname.Model.Exams_Model;
 import ir.eyrsa.app.ayinname.R;
 
@@ -34,8 +41,36 @@ public class ListExam_Adapter extends RecyclerView.Adapter<ListExam_Adapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.textView_nameExam.setText(arrayExamsModel.get(position).getNameExam());
+        if (checkFree(position))
+        {
+            holder.imageView_lock.setVisibility(View.VISIBLE);
+        }
+        else
+            holder.imageView_lock.setVisibility(View.GONE);
+        holder.textView_number.setText(position+"");
 
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkFree(position))
+                    Config.failedToast(context.getString(R.string.toast_errorBuy));
+                else
+                {
+                    Intent intent=new Intent(Application.getContext(), QuestionsActivity.class);
+                    intent.putExtra("idExam",arrayExamsModel.get(position).getId());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+            }
+        });
+
+
+    }
+    private boolean checkFree(int position)
+    {
+        if (arrayExamsModel.get(position).getFree()==(byte)0)
+            return true;
+        return false;
     }
 
     @Override
@@ -45,11 +80,15 @@ public class ListExam_Adapter extends RecyclerView.Adapter<ListExam_Adapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textView_nameExam;
+        TextView textView_number;
+        ImageView imageView_lock;
+        CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView_nameExam=itemView.findViewById(R.id.textView_nameExam);
+            textView_number=itemView.findViewById(R.id.textView_number);
+            imageView_lock=itemView.findViewById(R.id.imageView_lock);
+            cardView=itemView.findViewById(R.id.cardView);
         }
     }
 }

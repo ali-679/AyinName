@@ -57,6 +57,7 @@ public class QuestionsActivity extends AppCompatActivity {
 
         iRetrofit = RetrofitClient.getRetrofit(Config.BASE_URL + Config.EXAM_URL).create(IRetrofit.class);
         idExam = 1;
+        idExam = getIntent().getExtras().getInt("idExam", 1);
         getData();
         setTimer();
     }
