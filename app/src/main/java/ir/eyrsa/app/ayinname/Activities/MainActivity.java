@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -13,6 +14,8 @@ import android.widget.ImageView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import ir.eyrsa.app.ayinname.Config.Application;
+import ir.eyrsa.app.ayinname.Config.Config;
+import ir.eyrsa.app.ayinname.Config.SharedPreferencesManager;
 import ir.eyrsa.app.ayinname.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
@@ -81,7 +85,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (view==cardView_buy)
         {
-
+            String email = SharedPreferencesManager.getSharedPreferences().getString(SharedPreferencesManager.EMAIL,"");
+            String url=Config.BASE_URL+Config.PAYMENT_URL+email;
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
         }
     }
 }

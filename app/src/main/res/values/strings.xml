@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ayin Name</string>
+    <string name="app_name">آزمون راهنمایی و رانندگی</string>
 
 
     <string name="toast_errorGetData">نمی تواند اطلاعات را دریافت کند</string>
